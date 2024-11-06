@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <style>
+
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .contenedor {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h2 {
+            border-bottom: 1px solid white;
+            padding-bottom: 10px;
+            color:deeppink
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        .galeria {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .galeria img {
+            width: 45%;
+            height: auto;
+            transition: transform 0.3s;
+            border-radius: 50%;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.05);
+        }
+
+        a {
+            color: lightblue;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h2>Información sobre mí</h2>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <td>Alejo Forni Sánchez</td>
+            </tr>
+            <tr>
+                <th>Edad</th>
+                <td>20 años</td>
+            </tr>
+            <tr>
+                <th>Ocupación</th>
+                <td>Estudiante de grado superior</td>
+            </tr>
+            <tr>
+                <th>Estudios</th>
+                <td>Bachillerato de Ciencias Sociales</td>
+            </tr>
+        </table>
+
+        <h2>Aficiones</h2>
+        <ul>
+            <li>Tatuar</li>
+            <li>Leer manga</li>
+            <li>Jugar videojuegos</li>
+            <li>Hacer música</li>
+        </ul>
+
+        <h2>Ciudades que he visitado</h2>
+        <ul>
+            <li>Lechería, Venezuela</li>
+            <li>Buenos Aires, Argentina</li>
+            <li>Madrid, España</li>
+            <li>Granada, España</li>
+            <li>Miami, EE.UU.</li>
+        </ul>
+
+
+        <h2>Enlaces a sitios de interés</h2>
+        <ul>
+            <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+            <li><a href="https://www.medac.es" target="_blank">MEDAC</a></li>
+            <li><a href="https://github.com/ForniGMDV" target="_blank">Mi perfil en GitHub</a></li>
+        </ul>
+
+        <h2>Galería de imágenes</h2>
+        <div class="galeria">
+            <img src="/perfil/imagenes/fotoactual.jpeg" alt="Imagen 1">
+            <img src="/perfil/imagenes/fotochico.jpeg" alt="Imagen 2">
+        </div>
+
+        <h2>Actividades recientes</h2>
+        <ul>
+            <li>Suspendí el exámen práctico de conducir</li>
+            <li>Empecé a aprender a tatuar</li>
+            <li>Acabo de aprender a usar el hover y el target="_blank" haciendo este trabajo</li>
+        </ul>
+
+        <h2>Información adicional</h2>
+        <p>
+            Nací en Venezuela, y siempre me ha gustado la tecnología y la programación. Desde pequeño, me interesaba mucho
+            cómo funcionaban los videojuegos y ordenadores por dentro, lo que me llevó a estudiar este grado. Me encanta aprender nuevas
+            tecnologías y siempre estoy buscando nuevos retos.
+        </p>
+
+    </div>
+
+</body>
+</html>

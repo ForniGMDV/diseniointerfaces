@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios CSS</title>
+    <style>
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            box-shadow: inset;
+        }
+        .caja1{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            border: 1px solid black;
+            height: 200px;
+            align-items: flex-start;
+        }
+
+
+        /* Justify-content es una propiedad de CSS que se usa para alinear
+        los elementos dentro de un contenedor flexible o de una cuadrícula,
+        según el eje horizontal o principal. Esta propiedad permite 
+        distribuir el espacio entre y alrededor de los elementos, de 
+        acuerdo con diferentes valores que se pueden especificar. */
+
+
+        /* La propiedad align-content en HTML se usa para 
+        alinear el espacio entre y alrededor de los 
+        elementos dentro de un contenedor flexible o de 
+        una cuadrícula, según el eje transversal o 
+        secundario. Esta propiedad solo tiene efecto 
+        cuando hay más de una línea de elementos en el 
+        contenedor1.*/
+
+
+        .parrafo{
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+        .textos{
+            display: flex;
+            justify-content: space-around;
+            align-items: baseline;
+            border: 1px solid black;
+            height: 200px;
+        }
+        .colores{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 200px;
+            width: 300px;
+            align-items: stretch;
+        }
+        .colores--rojo{
+            background-color: red;
+            width: 50%;
+        }
+        .colores--verde{
+            background-color: green;
+            width: 50%;
+        }
+        .colores--azul{
+            background-color: blue;
+            width: 50%;
+        }
+        .colores--amarillo{
+            background-color: yellow;
+            width: 50%;
+        }
+        .caja-justificada{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .colores2{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            height: 200px;
+            width: 300px;
+            border: 1px solid black;
+            align-content: center;
+        }
+        .colores3{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            height: 200px;
+            width: 300px;
+            border: 1px solid black;
+            align-content: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+
+    align-items
+
+    Significa que la propiedad align-items en HTML5 define la forma en que el navegador distribuye el espacio entre y alrededor de los elementos 
+    a lo largo del eje secundario del contenedor flexible o de la cuadrícula. En un contenedor flexible, los elementos se alinean en el eje transversal, 
+    que es vertical por defecto (opuesto al flex-direction). 
+    
+    -->
+
+    <div class = "caja1">
+        <button type="button">Botón</button>
+        <button type="button">Primary</button>
+        <button type="button">Secondary</button>
+    </div>
+
+    <div class ="parrafo"></div>
+        <p>Párrafo 1</p>
+        <p>Párrafo 2</p>
+        <p>Párrafo 3</p>
+    </div>
+
+    <section class = "textos">
+        <h2>Título 2</h2>
+        <h3>Subtítulo</h3>
+        <span>Texto pequeño</span>
+    </section>
+
+    <p>Colores 1</p>
+    <div class="colores">
+        <div class="colores--rojo">
+            Rojo
+        </div>
+        <div class="colores--verde">
+            Verde
+        </div>
+        <div class="colores--amarillo">
+            Amarillo
+        </div>
+    </div>
+
+    <p>Caja justificada</p>
+    <div class ="caja-justificada">
+        <h1 class="caja-justificada__title">Título</h1>
+        <div style="width:50px; height:50px; background-color: red;"></div> 
+        <div style="width:50px; height:50px; background-color: green;"></div> 
+        <div style="width:50px; height:50px; background-color: blue;"></div> 
+        <div style="width:50px; height:50px; background-color: yellow;"></div>
+    </div>
+
+    <p>Colores 2</p>
+    <div class="colores2">
+        <div class="colores--rojo">
+            Rojo
+        </div>
+        <div class="colores--verde">
+            Verde
+        </div>
+        <div class="colores--azul">
+            Azul
+        </div>
+        <div class="colores--amarillo">
+            Amarillo
+        </div>
+    </div>
+
+    <p>Colores 3</p>
+    <div class="colores3">
+        <div class="colores--rojo">
+            Rojo
+        </div>
+        <div class="colores--verde">
+            Verde
+        </div>
+        <div class="colores--amarillo">
+            Amarillo
+        </div>
+    </div>
+</body>
+</html>
