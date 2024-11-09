@@ -94,14 +94,10 @@ body{
     /* transición */
 }
 
-/* efecto con keyframes - hover en el Logo */
-.header__logo:hover h3 {
-    /* animation desdeDerecha 2s; */
-}
 
 /* efecto hover en Logo */
 .header__logo:hover{
-    background-color: var(--color-backgroung);
+    background-color: var(--color-background);
     color: black;
     border-radius: 2px;
 }

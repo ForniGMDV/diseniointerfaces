@@ -74,6 +74,9 @@ body {
   font-family: "WebSymbolsRegular";
 }
 
+.content__wrap{
+  margin-bottom: 100px;
+}
 /* Cabecera */
 .header {
   display: grid;
@@ -359,50 +362,51 @@ body {
   }
 }
 
-
+.articlesandaside{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 /* Barra lateral */
 .content__lateral {
-  width: 300px; /* en la estrategia de Grid / Flex revisar este punto */
-  min-height: 1070px; /* en la estrategia de Grid / Flex revisar este punto */
+  display: grid;
+  grid-template-rows: auto;
+  gap: 50px;
   font-family: "TrebuchetMS";
-  float: right; /* en la estrategia de Grid / Flex revisar este punto */
-  margin: 20px;
+  margin-left: 100px;
+  margin-top: 100px;
 }
 .lateral__title {
-  display: block;
-  width: auto;
-  height: 45px;
-  line-height: 49px;
-  background: url("../img/pxgray.png"), var(--color-text-white);
-  box-shadow: 0px 1px 0px var(--color-box-shadow2),
-    1px 2px 0px var(--color-box-shadow2), 2px 3px 0px var(--color-box-shadow2),
-    3px 4px 0px var(--color-box-shadow2);
+  background-color: var(--color-purple-text);
+  color: var(--color-text-white);
+  box-shadow: 
+        0 0 5px var(--color-banner-border),
+        0 0 10px var(--color-banner-border),
+        0 0 15px var(--color-banner-border),
+        0 0 20px var(--color-banner-border);
   font-size: 30px;
   font-family: "BebasNeue";
   font-weight: normal;
   letter-spacing: 2px;
+  padding-top: 5px;
   padding-left: 15px;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
+  border-radius: 5px;
 }
 
-.lateral__title:first-child {
-  margin-top: 0px;
-}
 .lateral__search {
-  width: 90%; /* en la estrategia de Grid / Flex revisar este punto */
-  height: 30px;
+  display: grid;
+  grid-template-columns: auto;
+  height: 32px;
   margin: 10px auto;
   background-color: var(--color-text-white);
   border: 1px solid var(--color-background);
   border-radius: 5px;
-  box-shadow: 1px 1px 4px var(--color-background) inset;
+  box-shadow: 
+        0 0 5px var(--color-banner-border),
+        0 0 10px var(--color-banner-border);
 }
 
 .lateral__search input[type="text"] {
-  width: 85%; /* para que quepa el botón */ /* en la estrategia de Grid / Flex revisar este punto */
-  height: 30px;
-  border: none;
   padding-left: 5px;
   border-radius: 5px;
   background-color: transparent;
@@ -428,28 +432,35 @@ body {
   color: var(--color-focus);
   padding-left: 6px;
 }
+
+.lateral__login.aside-box{
+  border-radius: 5px;
+  margin-bottom: 25px;
+  box-shadow: 
+        0 0 5px var(--color-banner-border),
+        0 0 10px var(--color-banner-border);
+}
 .aside-box {
-  width: 85%; /* en la estrategia de Grid / Flex revisar este punto */
-  height: 240px;
+  height: 250px;
   margin: 0px auto;
   margin-top: 20px;
   padding-top: 2px;
   background-color: var(--color-text-white);
-  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.3), 0px 3px 7px rgba(0, 0, 0, 0.3),
-    0px 1px var(--color-text-white) inset, 0px -3px 2px rgba(0, 0, 0, 0.3) inset;
 }
-
+.lateral__login.aside-box{
+  display: grid;
+  grid-template-rows: 1fr;
+  align-items: center;
+}
 .lateral__login input[type="email"],
 .lateral__login input[type="password"] {
-  display: block;
   margin: 0px auto;
-  margin-top: 20px;
-  width: 82%;
+  margin-top: 30px;
+  margin-left: 30px;
   height: 30px;
   border: 1px solid var(--color-background);
   box-shadow: 1px 1px 1px var(--color-background) inset;
   border-radius: 5px;
-  padding-left: 30px;
   color: var(--color-gray);
 }
 .lateral__login input[type="email"]:focus,
@@ -460,12 +471,10 @@ body {
 
 .lateral__login .lateral-box__user,
 .lateral__login .lateral-box__password {
-  display: block;
   text-align: center;
-  position: absolute;
   margin-left: 30px;
   margin-top: 6px;
-  height: 30px;
+  font-size: 8.5px;
 }
 .lateral__login .lateral-box__password {
   margin-left: 30px;
@@ -477,22 +486,19 @@ body {
 .lateral__login input[type="button"],
 .lateral__login input[type="reset"],
 .lateral__login button {
-  /* display: block; */
-  float: left; /* en la estrategia de Grid / Flex revisar este punto */
   text-align: center;
-  width: 100px; /* en la estrategia de Grid / Flex revisar este punto */
   height: 35px;
-  margin-top: 20px;
+  margin: 20px 0px 20px 47px;
+  padding: 10px;
   color: var(--color-text-white);
   /* Degradado desde abajo - to bottom --> hacia arriba */
-  background: linear-gradient(to bottom, #3eb8e5 0%, #2ca0ca 100%);
+  background: linear-gradient(to bottom, #e57cff 0%, #be26e4 100%);
   border: 1px solid #156785;
-  border-radius: 0px;
+  border-radius: 5px;
   cursor: pointer;
   font-size: 15px;
   font-family: "TrebuchetMS";
-  margin-left: 17px;
-  margin-bottom: 20px;
+
   /* transición */
   transition: all 300ms;
 }
@@ -501,7 +507,10 @@ body {
 .lateral__login input[type="reset"]:hover,
 .lateral__login button:hover {
   /* le incluyo una sombra */
-  box-shadow: 2px 2px 5px var(--color-primary);
+  box-shadow: 
+        0 0 5px var(--color-banner-border),
+        0 0 10px var(--color-banner-border),
+        0 0 15px var(--color-banner-border);
 }
 
 .lateral__login a {
@@ -511,23 +520,31 @@ body {
   font-size: 14px;
   color: var(--color-focus);
 }
+
 .lateral__login a:hover {
   text-decoration: underline;
-  color: #2f78bc;
+  color: var(--color-purple-text);
+}
+.lateral__social.aside-box{
+  margin-bottom: 20px;
+}
+.lateral__social {
+  width: 100%;
+  height: 87%;
+  box-shadow: 
+        0 0 5px var(--color-banner-border),
+        0 0 10px var(--color-banner-border),
+        0 0 15px var(--color-banner-border);
+  border-radius: 5px;
 }
 
-.lateral__social {
-  height: 220px;
-}
 
 .lateral__social a {
-  display: block;
-  color: var(--color-bg);
+  color: var(--color-purple-text);
   text-decoration: none;
   font-size: 30px;
-  margin-left: 20px;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-left: 115px;
+  margin-top: 20px;
 }
 
 .lateral__social .social__overlay {
@@ -536,12 +553,13 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
-  text-shadow: 0px 0px 1px var(--color-background);
-  border: 3px solid var(--color-text-white);
-  box-shadow: 0px 0px 4px var(--color-background);
+  text-shadow: 0 0 5px var(--color-banner-border);
+  border: 1px solid var(--color-bg);
+  box-shadow: 
+        0 0 5px var(--color-banner-border);
   background: #f4f7fe;
   position: absolute;
-  padding: 5px;
+  padding: 0px;
   margin-left: 70px;
   margin-top: -52px;
   cursor: pointer;
@@ -561,68 +579,72 @@ body {
   transform: translateX(0);
 }
 
+
 /* Artículos */
 .content__articles {
   display: grid;
-  grid-template-rows: repeat(6,1fr);
+  grid-template-rows: auto;
   width: 860px;
+  margin-top: 100px;
 }
 
 .content__articles h2 {
-  display: block;
   width: 100%;
-  height: 75px;
-  line-height: 75px; /* centra el texto */
   text-align: center;
   font-family: "BebasNeue";
   font-size: 40px;
   font-weight: normal;
-  letter-spacing: 2px;
-  background: url("../img/pxgray.png"), var(--color-text-white);
-  box-shadow: 0px 1px 0px var(--color-box-shadow2),
-    1px 2px 0px var(--color-box-shadow2), 2px 3px 0px var(--color-box-shadow2),
-    3px 4px 0px var(--color-box-shadow2);
-  margin: 0px auto;
-  margin-top: 20px;
-  margin-bottom: 15px;
+  color: var(--color-text-white);
+  background: url(../img/backbaner.png);
+  animation: fondoArticulos 4s infinite linear;
+  box-shadow: 
+        0 0 5px var(--color-banner-border),
+        0 0 10px var(--color-banner-border),
+        0 0 15px var(--color-banner-border),
+        0 0 20px var(--color-banner-border),
+        0 0 25px var(--color-banner-border);
 }
 
-.articles__title{
-
+/* keyframes */
+@keyframes fondoArticulos {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 1200px -200px;
+  }
 }
 
-.articles__article{
-  width: 98%; /* en la estrategia de Grid / Flex revisar este punto */
-  height: auto;
-  border: 1px solid var(--color-background);
-  margin: 40px auto;
+
+.articles__article{ 
+  display: grid;
+  grid-template-rows: auto;
+  gap: 10px;
+  box-shadow: 
+        0 0 5px var(--color-banner-border),
+        0 0 10px var(--color-banner-border),
+        0 0 15px var(--color-banner-border);
+  margin-top: 40px;
   padding: 10px;
   font-family: "TrebuchetMS";
   background: var(--color-text-white);
-  color: var(--color-bg);
-  box-shadow: 1px 1px 2px var(--color-box-shadow);
 }
 
 .articles__article h4 {
-  display: block;
-  font-size: 23px;
-  margin: 3px;
+  font-size: 25px;
 }
 .articles__article h4 a {
   text-decoration: none;
-  color: var(--color-text-title);
+  color: var(--color-bg);
 }
 .articles__article h4 a:hover {
   text-decoration: underline;
 }
 
 .article__datos {
-  float: right; /* en la estrategia de Grid / Flex revisar este punto */
-  background-color: var(--color-box-shadow2);
+  background-color: var(--color-bg);
   color: var(--color-text-white);
-  height: 30px; /* en la estrategia de Grid / Flex revisar este punto */
-  line-height: 30px;
-  margin: -10px; /* en la estrategia de Grid / Flex revisar este punto */
+  margin: -10px -10px 0px 500px;
   padding: 4px;
   font-size: 13px;
   border-radius: 0px 0px 0px 5px; /* esquina inferior izq 5px */
@@ -631,73 +653,27 @@ body {
   margin: 6px;
 }
 
-.article__datos p {
+.articles__article p {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 15px;
-}
-
-.articles__blog {
-  height: 100px;
-  margin-top: 60px;
-  line-height: 100px;
-  text-align: center;
-  font-family: "BebasNeue";
-  /* transición */
-  transition: all 500ms ease-in-out;
-}
-.articles__blog a {
-  font-family: "BebasNeue";
-  font-size: 40px;
-  letter-spacing: 3px;
-  color: var(--color-text-title);
-  text-decoration: none;
-  /* transición */
-  transition: all 500ms ease-in-out;
-}
-/* efecto de hover sobre articles__blog */
-.articles__blog:hover{
-  background-color: var(--color-bg);
-  border: 10px solid var(--color-primary);
-  border-radius: 240px;
-  box-shadow: 0px 0px 10px var(--color-gray);
-  animation: iluminacion 10s infinite linear;
-}
-.articles__blog:hover a{
-  color: var(--color-text-white);
-  text-shadow: 1px 1px 1px var(--color-bg),1px 2px 1px var(--color-bg),1px 3px 1px var(--color-bg),1px 4px 1px var(--color-bg),1px 5px 1px var(--color-bg),1px 6px 1px var(--color-bg);
-}
-
-@keyframes iluminacion{
-  0%{
-      border: 10px solid var(--color-primary);
-  }
-  25%{
-      border: 10px solid green;
-  }
-  50%{
-      border: 10px solid yellow;
-  }
-  75%{
-      border: 10px solid blue;
-  }
-  100%{
-      border: 10px solid var(--color-primary);
-  }
 }
 
 /* FOOTER */
 .content__footer {
   width: 100%;
   height: 470px;
-  background-color: black;
-  color: var(--color-text-white);
+  background: url(../img/purplebg.jpg);
+  color: var(--color-purple-text);
   overflow: hidden;
 }
+
+.footer__wrap{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 20px;
+}
 .footer__wrap > div {
-  float: left; /* en la estrategia de Grid / Flex revisar este punto */
-  width: 25%; /* en la estrategia de Grid / Flex revisar este punto */
-  height: 370px; /* en la estrategia de Grid / Flex revisar este punto */
   margin: 40px;
   text-align: center;
   color: var(--color-text-white);
@@ -714,16 +690,20 @@ body {
 
 .footer__title {
   display: block;
-  background: url("../img/pxgray.png"), var(--color-text-white);
+  background: var(--color-purple-text);
+  color: var(--color-text-white);
   height: 50px;
   letter-spacing: 2px;
   text-align: center;
   font-family: "BebasNeue";
   font-size: 40px;
   line-height: 55px;
-  color: black;
   border-radius: 5px;
   margin-bottom: 15px;
+  box-shadow: 
+        0 0 5px var(--color-banner-border),
+        0 0 10px var(--color-banner-border),
+        0 0 15px var(--color-banner-border);
 }
 .footer__list {
   text-align: left;
@@ -733,10 +713,11 @@ body {
 .footer__list li {
   margin-top: 10px;
   padding: 5px;
-  border-bottom: 1px solid var(--color-background);
+  border-bottom: 1px solid var(--color-text-white);
 }
 .footer__list li a {
   display: block;
+  color: var(--color-text-white);
   height: 40px;
   /* transición */
   transition: all 300ms ease-in-out;
@@ -747,7 +728,7 @@ body {
     /* margin-left: 40px; */
     /* text-indent: 10%; */
     /* transform: translateX(10%); */
-    color: var(--color-text-white);
+    color: var(--color-purple-text);
     width: 100%;
 }
 
